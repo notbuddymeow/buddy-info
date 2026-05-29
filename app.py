@@ -20,21 +20,6 @@ def home():
     """Health check endpoint for Render"""
     return f"Bot {bot_name} is operational"
 
-@app.route('/info')
-def info():
-
-    uid = request.args.get("uid")
-
-    if not uid:
-        return jsonify({
-            "error": "UID missing"
-        }), 400
-
-    return jsonify({
-        "uid": uid,
-        "name": "Buddy",
-        "status": "success"
-    })
 
 def run_flask():
     """Run Flask with Render-compatible settings"""
