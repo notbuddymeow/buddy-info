@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands, tasks
 import os
 import traceback
-from flask import Flask
+from flask import Flask, jsonify, request
 import sys
 import aiohttp
 import asyncio
